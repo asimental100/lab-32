@@ -1,0 +1,11 @@
+.CharactersLightMode {
+  background-color: cornsilk;
+  color: black;
+  margin: 20px;
+  padding: 5px;
+}
+
+.CharactersDarkMode {
+  background-color: black;
+  color: cornsilk;
+}

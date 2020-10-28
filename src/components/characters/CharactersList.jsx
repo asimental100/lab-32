@@ -13,8 +13,6 @@ export const CharacterList = () => {
     </>
   ));
 
-  console.log(characterElements);
-
   return (
     <ul className={styles.CharactersList}>
       {characterElements}

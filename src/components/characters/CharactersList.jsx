@@ -1,6 +1,8 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React, { useContext } from 'react';
 import { Character } from './Characters';
 import { useCharacters } from '../../hooks/character';
+import { ColorContext } from '../../context/ColorContext';
 import styles from './CharactersList.css';
 
 export const CharacterList = () => {
@@ -13,8 +15,15 @@ export const CharacterList = () => {
     </>
   ));
 
+  const { backgroundColorType, textColorType } = useContext(ColorContext);
+
+  const colors = {
+    backgroundColor: backgroundColorType,
+    color: textColorType
+  };
+
   return (
-    <ul className={styles.CharactersList}>
+    <ul style={colors} className={styles.CharactersList}>
       {characterElements}
     </ul>
   );

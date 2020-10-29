@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Characters.css';
 
 export const Character = ({ name, status, image }) => (
-  <li key={name} className={styles.CharactersLightMode}>
+  <li key={name}>
     <h1>{name}</h1>
     <img src={image} alt={name}></img>
     <p>{status}</p>
